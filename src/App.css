@@ -1,0 +1,130 @@
+/* 🌈 Global Styles for Your Finance Dashboard */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;600&display=swap");
+
+:root {
+  --primary: #6366f1;
+  --secondary: #10b981;
+  --accent: #f59e0b;
+  --bg: #f9fafb;
+  --surface: #ffffff;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+}
+
+/* 🎯 App Layout */
+#root {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2ff, #f9fafb);
+  font-family: "Inter", "Poppins", sans-serif;
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.4s ease-in-out;
+}
+
+/* 🌟 Logo Animation */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: transform, filter;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 0 0.3em rgba(99, 102, 241, 0.4));
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 1.2em rgba(99, 102, 241, 0.7));
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo.react {
+    animation: logo-spin infinite 18s linear;
+  }
+}
+
+/* 🪄 Card Style (Reusable) */
+.card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(99, 102, 241, 0.15);
+}
+
+/* 💬 Read The Docs Link */
+.read-the-docs {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+}
+
+.read-the-docs:hover {
+  color: var(--primary);
+}
+
+/* ✨ Buttons */
+button {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.6rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+/* 💫 Inputs */
+input {
+  border: 1px solid #e5e7eb;
+  padding: 0.6rem 0.9rem;
+  border-radius: 0.5rem;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* 🌐 Smooth Fade-In */
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
